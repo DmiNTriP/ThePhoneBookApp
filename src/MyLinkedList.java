@@ -93,12 +93,12 @@ public class MyLinkedList {
     // Search for the employee object that is being called
     public Employee Search(int hashKey, String nameToFind) throws NullPointerException {
         Employee current = firstEmployee;
-        while (current != null && current.key <= hashKey) {
+        while (current != null && current.getKey() <= hashKey) {
             if (current.fullName().equals(nameToFind)) {
                 return current;
 
             }
-            current = current.next;
+            current = current.getNext();
         }
         return null;
     }

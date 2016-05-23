@@ -12,8 +12,41 @@ public class Main {
         Employee emp = new Employee("Kyler","Callaway","kyler.cal/away", "k");
         MyLinkedList theLinkedList = new MyLinkedList(emp);
 
-        Employee Bob = new Employee("Bob","Smith","bSmith@somewhere.com","555-555-5555");
-        table.addInformation(Bob);
+        Employee bob = new Employee("Bob","Smith","bSmith@somewhere.com","555-555-5555");
+        table.addInformation(bob);
+        Employee jane = new Employee("Jane","Williams","jw@somewhere.com","555-555-5555");
+
+        table.addInformation(jane);
+        Employee mohamed = new Employee("Mohamed","Ala-Sam","mas@somewhere.com","555-555-5555");
+
+        table.addInformation(mohamed);
+        Employee pat = new Employee("Pat","Jones","pjones@homesweethome.com","555-555-5555");
+
+        table.addInformation(pat);
+        Employee billy = new Employee("Billy","Kidd","billy_the_kid@nowhere.com","555-555-5555");
+
+        table.addInformation(billy);
+        Employee h = new Employee("H","Houdini","houdini@noplace.com","555-555-5555");
+
+        table.addInformation(h);
+        Employee jack = new Employee("Jack","Jones","jjones@hill.com","555-555-5555");
+
+        table.addInformation(jack);
+        Employee jill = new Employee("Jill","Jones","jillj@hill.com","555-555-5555");
+
+        table.addInformation(jill);
+        Employee john = new Employee("John","Doe","jdoe@somedomain.com","555-555-5555");
+
+        table.addInformation(john);
+        Employee janeD = new Employee("Jane","Doe","jdoe@somedomain.com","555-555-5555");
+
+        table.addInformation(janeD);
+
+
+        table.find(h.fullName());
+
+
+
 
 
 
