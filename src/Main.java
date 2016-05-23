@@ -9,10 +9,13 @@ public class Main {
         BufferedReader mReader = new BufferedReader(new InputStreamReader(System.in));
         HashTable table = new HashTable();
         //TODO just creating all objects to eb safe
-        Employee emp = new Employee("Kyler","Callaway","kyler.callaway", "k");
+        Employee emp = new Employee("Kyler","Callaway","kyler.cal/away", "k");
         MyLinkedList theLinkedList = new MyLinkedList(emp);
 
-        String choice;
+
+        //TODO: Delete all this extra code if current class structure works properly
+
+       /* String choice;
         // creating the user interface
         System.out.println("To add an Employee to the Address Book please input add or done into the console");
         choice = mReader.readLine();
@@ -67,7 +70,7 @@ public class Main {
 
                 }
 
-        } while (!choice.equals("done"));
+        } while (!choice.equals("done"));*/
 
     }
 }
