@@ -6,8 +6,8 @@ public class Employee {
     private String mLastName;
     private String mEmail;
     private String mPhoneNum;
-    public Employee next; // references next employee in the LinkedList
-    public int key;
+    private Employee next; // references next employee in the LinkedList
+    private int key;
 
 //TODO this may need to get used as a constructor but probably not;
     public Employee(String firstName, String lastName,String email, String phoneNum){
@@ -68,7 +68,15 @@ public class Employee {
         mPhoneNum = phoneNum;
     }
 
-/*    @Override
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    /*    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -92,6 +100,12 @@ public class Employee {
         return mFirstName.toUpperCase().concat(mLastName.toUpperCase());
     }
     public int nameToHash(){
-        return fullName().hashCode();
+        int hashhKey = 0;
+        for (int i = 0; i < fullName().length(); i++) {
+            int charCode = fullName().charAt(i);
+            hashhKey = (hashhKey * 67 + charCode) % 13;
+        }
+        return hashhKey;
     }
+
 }

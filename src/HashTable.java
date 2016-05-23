@@ -72,7 +72,7 @@ public class HashTable {
 
     public void addInformation(Employee anEmployee) {
         int hashKey = anEmployee.nameToHash();
-        anEmployee.key = hashKey;
+        anEmployee.se=;
         Employee current = null;
         current = anEmployee;
 

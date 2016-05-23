@@ -13,6 +13,7 @@ public class Main {
         MyLinkedList theLinkedList = new MyLinkedList(emp);
 
         Employee Bob = new Employee("Bob","Smith","bSmith@somewhere.com","555-555-5555");
+        table.addInformation(Bob);
 
 
 
