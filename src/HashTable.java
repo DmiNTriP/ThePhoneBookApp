@@ -25,21 +25,21 @@ public class HashTable {
     }
 
     public int nameHashingFunction(String fullNameHash) {
-        int hKeyValue = newEmployee.key;
+        int hKeyValue = 0;
 
         //K has a unicde character value of 75. 75 -1 will start the letter count at 1
 
         for (int i = 0; i < fullNameHash.length(); i++) {
-            int charCodeK = fullNameHash.charAt(i) - 74;
+            int charCodeK = fullNameHash.charAt(i) - 47;
             //This is the formula for the hashcode method ion Employee
-            int hashFormula = fullNameHash.hashCode();
+//            int hashFormula = fullNameHash.hashCode();
             int temphashKeyValue = hKeyValue;
 
             //calculate hash key using the 26 letters in alphabet + a blank
-            hKeyValue = (hKeyValue * 27 + hashFormula) % arraySize;
+            hKeyValue = (hKeyValue * 67 + charCodeK) % arraySize;
 
             System.out.println("The Hash Key Value is: " + temphashKeyValue +
-                    " * 27 + Character code (unicode) " + "%" +
+                    " * 47 + Character code (unicode) " + "%" +
                     " arraySize " + arraySize + " = " + hKeyValue);
         }
         return hKeyValue;
@@ -67,16 +67,18 @@ public class HashTable {
     public Employee find(String nameToFind) {
         int hashKey = nameHashingFunction(nameToFind);
         Employee theEmployee = linkListArray[hashKey].Search(hashKey, nameToFind);
+        System.out.println(nameToFind + "was found");
+
         return theEmployee;
     }
 
     public void addInformation(Employee anEmployee) {
         int hashKey = anEmployee.nameToHash();
-        anEmployee.se=;
+        anEmployee.setKey(hashKey);
         Employee current = null;
         current = anEmployee;
 
-        if (anEmployee == current && current.key == hashKey) {
+        if (anEmployee == current && current.getKey() == hashKey) {
             String firstName = anEmployee.getFirstName();
             String lastName = anEmployee.getLastName();
             String eMail = anEmployee.getEmail();
@@ -92,8 +94,14 @@ public class HashTable {
         return false;
         }
 
-
+    public MyLinkedList remove() {
+        return null;
     }
+}
+
+
+
+
 /*    public void displayTheEmployees() {
 //get hashBucket
 //If the bucket is empty/null then the employee cannot be listed.
