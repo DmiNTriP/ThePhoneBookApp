@@ -84,6 +84,7 @@ public class HashTable {
             anEmployee = new Employee(firstName, lastName, eMail, phoneNum);
             int hashBucket = hashKey % 13;
             linkListArray[hashBucket] = link;
+            System.out.println(anEmployee + " has been added");
         }
     }
 

@@ -12,6 +12,10 @@ public class Main {
         Employee emp = new Employee("Kyler","Callaway","kyler.cal/away", "k");
         MyLinkedList theLinkedList = new MyLinkedList(emp);
 
+        Employee Bob = new Employee("Bob","Smith","bSmith@somewhere.com","555-555-5555");
+
+
+
 
         //TODO: Delete all this extra code if current class structure works properly
 
